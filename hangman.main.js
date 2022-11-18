@@ -4,7 +4,7 @@
 
     let triesLeft = 6;
     let winCouter = 0;
-    document.getElementById("livesLeft").innerHTML = "Tries: " + triesLeft;
+    document.getElementById("livesLeft").innerHTML = "Tries left: " + triesLeft;
     document.getElementById("hint").innerHTML = "Hint: " + wordArray[randomWord].hint;
 
     for (let i = 0; i < alphabetArray.length; ++i) {
@@ -36,14 +36,14 @@
 
             if (triesLeft == 0) {
                 disableAlphabet();
-                popUp("Game Over");
+                popUp("Game Over!");
             }
             if (winCouter == wordArray[randomWord].word.length) {
                 disableAlphabet();
                 popUp("Congratulation, you Won!");
             }
 
-            document.getElementById("livesLeft").innerHTML = "Tries: " + triesLeft;
+            document.getElementById("livesLeft").innerHTML = "Tries left: " + triesLeft;
         });
     }
 
