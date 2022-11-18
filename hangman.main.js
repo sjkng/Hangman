@@ -35,12 +35,12 @@
             console.log(winCouter);
 
             if (triesLeft == 0) {
-                alert("Game Over");
                 disableAlphabet();
+                popUp("Game Over");
             }
             if (winCouter == wordArray[randomWord].word.length) {
-                alert("Congratulations, you Won");
                 disableAlphabet();
+                popUp("Congratulation, you Won!");
             }
 
             document.getElementById("livesLeft").innerHTML = "Tries: " + triesLeft;
@@ -61,4 +61,8 @@
         for (let k = 0; k < alphabetArray.length; ++k) {
             document.getElementById(k).disabled = true;
         }
+    }
+
+    function popUp(popTxt) {
+        document.getElementById("myPopup").innerHTML = popTxt;
     }
